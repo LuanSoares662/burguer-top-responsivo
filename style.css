@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height:100vh;
+    overflow-x:hidden;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+    
+.caixa-verde {
+    background-color: #00a838;
+    width: 100%;
+    height: 75vh;
+    position: relative;
+    padding: 25px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.menu-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.links {
+    display: flex;
+    gap: 35px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.btn-menu {
+    background-color: white;
+    color: #a80000;
+    padding: 6px 28px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt-burguer {
+    position: absolute;
+    top: -150px;
+    left: -350px;
+    color: white;
+    font-size: 110px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    z-index: 1;
+}
+
+.txt-pop {
+    position: absolute;
+    bottom: 40px;
+    right: -50px;
+    color: white;
+    font-size: 120px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    
+}
+
+.img-hamburguer {
+    width: 550px;
+    position: relative;
+    top: -50px; 
+
+}
+
+.area-botao {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.btn-peca {
+    background-color: #128c3e;
+    color: white;
+    border: none;
+    padding: 12px 55px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.caixa-branca {
+    height: 25vh;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center; 
+    max-height: 300px;
+    left: 300px; 
+    
+}
+
+.descricao {
+    color: #6b1d1d;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.3;
+}
+
+
+.ver-mais-container {
+    position: absolute;
+    bottom: 25px;
+    left: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.linha-vermelha {
+    width: 120px;
+    height: 3px;
+    background-color: #a80000;
+    margin-bottom: 4px;
+}
+
+.ver-mais-container span {
+    color: #a80000;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .caixa-verde {
+        height: 65vh;
+        min-height: 520px;
+        padding: 38px 28px 0;
+        justify-content: flex-start;
+    }
+
+    .menu-topo {
+        width: 100%;
+    }
+
+    .links {
+        gap: clamp(18px, 4vw, 40px);
+    }
+
+    .links a {
+        font-size: 10px;
+    }
+
+    .banner {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+    }
+
+    .txt-burguer {
+        top: 30%;
+        left: 3%;
+        font-size: clamp(100px, 17vw, 145px);
+        letter-spacing: -4px;
+        white-space: nowrap;
+    }
+
+    .txt-pop {
+        right: 2%;
+        bottom: 34%;
+        font-size: clamp(74px, 12vw, 105px);
+        letter-spacing: -3px;
+    }
+
+    .img-hamburguer {
+        position: absolute;
+        top: 83%;
+        left: 50%;
+        width: min(68vw, 520px);
+        max-width: none;
+        max-height: none;
+        object-fit: contain;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .area-botao {
+        bottom: -31%;
+    }
+
+    .btn-peca {
+        padding: 16px 120px;
+        font-size: 24px;
+    }
+
+    .caixa-branca {
+        height: 35vh;
+        min-height: 280px;
+        max-height: none;
+        justify-content: center;
+        align-items: flex-start;
+        left: 0;
+        padding: 0 24px;
+    }
+
+    .descricao {
+        display: none;
+    }
+
+    .ver-mais-container {
+        position: absolute;
+        bottom: 6vh;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+    }
+
+    .linha-vermelha {
+        width: clamp(180px, 34vw, 260px);
+    }
+
+    .ver-mais-container span {
+        font-size: 10px;
+    }
+}
+
+/* CELULAR */
+@media screen and (max-width: 767px) {
+    .caixa-verde {
+        height: min(74vh, 130vw);
+        min-height: 400px;
+        padding: 8px 14px 0;
+        justify-content: flex-start;
+    }
+
+    .menu-topo {
+        position: relative;
+        z-index: 5;
+        width: 28px;
+        height: 24px;
+    }
+
+    .menu-topo::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to bottom,
+            white 0 4px,
+            transparent 4px 10px,
+            white 10px 14px,
+            transparent 14px 20px,
+            white 20px 24px
+        );
+    }
+
+    .logo,
+    .links,
+    .menu-topo > .btn-menu {
+        display: none;
+    }
+
+    .banner {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+    }
+
+    .txt-burguer {
+        top: 27%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: clamp(44px, 14vw, 56px);
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .txt-pop {
+        right: 10%;
+        top: 45%;
+        bottom: auto;
+        font-size: clamp(38px, 12vw, 48px);
+        letter-spacing: -2px;
+    }
+
+    .img-hamburguer {
+        position: absolute;
+        top: 81%;
+        left: 50%;
+        width: min(78vw, 320px);
+        max-width: none;
+        max-height: none;
+        object-fit: contain;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .area-botao {
+        bottom: -15%;
+    }
+
+    .btn-peca {
+        padding: 11px 50px;
+        font-size: 18px;
+    }
+
+    .caixa-branca {
+        height: calc(100vh - min(74vh, 130vw));
+        min-height: 150px;
+        max-height: none;
+        justify-content: center;
+        align-items: flex-start;
+        left: 0;
+        padding: 0 16px;
+    }
+
+    .descricao {
+        display: none;
+    }
+
+    .ver-mais-container {
+        position: relative;
+        position: absolute;
+        bottom: 2vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+        align-items: center;
+    }
+
+    .linha-vermelha {
+        width: clamp(110px, 34vw, 160px);
+    }
+}
